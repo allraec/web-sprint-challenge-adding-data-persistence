@@ -18,9 +18,9 @@ const getById = task_id => {
       .then((task) => {
         if (task) {
             return mappers.taskToBody(task);
-          } else {
+        }else {
             return null;
-          }
+        }
       })
   }
 
