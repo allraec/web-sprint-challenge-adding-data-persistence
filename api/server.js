@@ -10,8 +10,8 @@ server.get("/", (req, res) => {
     res.send(`<h1>API Available</h1>`);
 })
 server.use(express.json());
-/* server.use("/api/projects", projectsRouter); */
+server.use("/api", projectsRouter);
 server.use("/api", resourcesRouter);
-/* server.use("/api/tasks", tasksRouter); */
+server.use("/api", tasksRouter);
 
 module.exports = server;
